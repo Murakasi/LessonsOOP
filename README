@@ -1,0 +1,21 @@
+# lesson1 – BankAccount and Object Properties in C#
+
+This project demonstrates encapsulation and property usage in C# through a simple `BankAccount` class.
+
+## Concepts Covered
+
+- Auto-properties (`OwnerName`)
+- Read-only properties (`Balance`)
+- Backing fields (`_balance`)
+- Input validation in methods (`Deposit`, `Withdraw`)
+- Constructor-based initialization
+
+## Code Overview
+
+```csharp
+var account = new BankAccount("Alice", 1000m);
+account.Deposit(250m);
+account.Withdraw(100m);
+Console.WriteLine(account.Balance); // 1150
+
+
