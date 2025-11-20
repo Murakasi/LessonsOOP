@@ -1,0 +1,18 @@
+# Lesson1.BankAccount
+
+This project demonstrates encapsulation and property usage in C# through a simple `BankAccount` class.
+
+## Features
+
+- `OwnerName`: public auto-property
+- `Balance`: read-only property backed by a private field
+- `Deposit(amount)`: adds funds with validation
+- `Withdraw(amount)`: subtracts funds with validation and error handling
+
+## Example
+
+```csharp
+var account = new BankAccount("Alice", 1000m);
+account.Deposit(250m);
+account.Withdraw(100m);
+Console.WriteLine(account.Balance); // 1150
