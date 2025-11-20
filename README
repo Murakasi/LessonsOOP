@@ -7,15 +7,17 @@ This project demonstrates encapsulation and property usage in C# through a simpl
 - Auto-properties (`OwnerName`)
 - Read-only properties (`Balance`)
 - Backing fields (`_balance`)
-- Input validation in methods (`Deposit`, `Withdraw`)
+- Input validation in methods (`Deposit`, `Withdraw`, `TransferTo`)
 - Constructor-based initialization
+- Object-to-object interaction via public API
 
 ## Code Overview
 
 ```csharp
-var account = new BankAccount("Alice", 1000m);
-account.Deposit(250m);
-account.Withdraw(100m);
-Console.WriteLine(account.Balance); // 1150
+var alice = new BankAccount("Alice", 1000m);
+var bob = new BankAccount("Bob", 500m);
 
+alice.TransferTo(bob, 200m);
 
+Console.WriteLine(alice.Balance); // 800
+Console.WriteLine(bob.Balance);   // 700
